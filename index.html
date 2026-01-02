@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Sunday Finder - Festive Date Calculator</title>
+
+</head>
+
+<body>
+  <div class="snow-container" id="snowContainer"></div>
+
+  <div class="container">
+    <div class="decoration red"></div>
+    <div class="decoration gold"></div>
+    <div class="decoration green"></div>
+
+    <header class="header">
+      <h1 class="title">🎄 Christmas Sunday Finder 🎄</h1>
+      <p class="subtitle">Discover when December 25th falls on a Sunday</p>
+    </header>
+
+    <section class="input-section">
+      <div class="input-group">
+        <label class="input-label">Start Year</label>
+        <input type="number" id="startYear" class="year-input" placeholder="2000" min="1900" max="3000">
+      </div>
+      <div class="input-group">
+        <label class="input-label">End Year</label>
+        <input type="number" id="endYear" class="year-input" placeholder="2100" min="1900" max="3000">
+      </div>
+    </section>
+
+    <div class="button-group">
+      <button class="btn btn-primary" onclick="findXmasSundays()">
+        🎅 Find Sundays
+      </button>
+      <button class="btn btn-secondary" onclick="clearResults()">
+        ❄️ Clear Results
+      </button>
+      <button class="btn btn-secondary" onclick="loadExample()">
+        ⭐ Load Example
+      </button>
+    </div>
+
+    <div class="loading" id="loading">
+      <div class="loading-spinner"></div>
+      <p style="margin-top: 10px; color: var(--primary-green);">Calculating...</p>
+    </div>
+
+    <section class="results-section" id="resultsSection">
+      <h2 class="results-title">🎁 Results 🎁</h2>
+      <div class="results-count" id="resultsCount"></div>
+      <div class="years-grid" id="yearsGrid"></div>
+
+      <div class="stats-section">
+        <div class="stat-card">
+          <span class="stat-number" id="totalYears">0</span>
+          <div class="stat-label">Total Years</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="frequency">0</span>
+          <div class="stat-label">Frequency (%)</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="nextSunday">-</span>
+          <div class="stat-label">Next Sunday</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="gap">-</span>
+          <div class="stat-label">Average Gap</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
